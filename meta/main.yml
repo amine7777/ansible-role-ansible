@@ -23,6 +23,7 @@ galaxy_info:
         - all
   galaxy_tags:
     - system
-    - image
-    - docker
-    - packer
+    - ansible
+    - RedHat
+    - configuration
+    - provisioner
