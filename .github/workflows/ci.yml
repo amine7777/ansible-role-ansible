@@ -13,10 +13,10 @@ jobs:
     strategy:
       matrix:
         distro:
-          - centos8
-          - debian10
-          - ubuntu2004
-          - ubuntu1804
+          # - centos8
+          # - debian10
+          # - ubuntu2004
+          # - ubuntu1804
           - fedora32
 
     steps:
