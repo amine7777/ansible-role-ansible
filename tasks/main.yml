@@ -1,0 +1,23 @@
+---
+# tasks file for terraform
+- name: Install unzip
+  package:
+    name: unzip
+    state: present
+
+- name: Download and extract terraform
+  unarchive:
+    src: '{{ terraform_download_url }}'
+    dest: '{{ terraform_directory_path }}'
+    remote_src: yes
+    creates: '{{ terraform_directory_path }}/terraform'
+    mode: 0755
+
+- name: Check terraform version
+  command: terraform --version
+  changed_when: false
+  register: check_terraform
+
+- name: Display terraform version
+  debug:
+    msg: '{{ check_terraform.stdout_lines }}'
