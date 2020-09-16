@@ -1,0 +1,13 @@
+---
+- name: Update Debian
+  apt:
+    upgrade: yes
+    update_cache: true
+    cache_valid_time: 3600
+  when: ansible_os_family == 'Debian'
+
+- name: Update Debian
+  package:
+    name: '*'
+    state: latest
+  when: ansible_os_family == 'RedHat'

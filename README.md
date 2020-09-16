@@ -17,21 +17,10 @@ Requirements
 
 Role Variables
 --------------
-These variables helps to manage ansible installation.
 
 You can specify your ansible version in this variable.
 ```yaml
-ansible_version: 0.13.1
-ansible_arch: amd64
-ansible_directory_path: /usr/local/bin
-```
-This is the url where ansible will be downloaded.
-```ỳaml
-ansible_download_url: 'https://releases.hashicorp.com/ansible/{{ ansible_version }}/ansible_{{ ansible_version }}_linux_{{ ansible_arch }}.zip'
-```
-This is the path where packer binary will be stored.
-```yaml
-ansible_directory_path: /usr/local/bin
+ansible_version: 2.9.6
 ```
 
 Example Playbook
@@ -39,10 +28,11 @@ Example Playbook
 
 ```yaml
 - hosts: all
+  vars:
+    ansible_version: 2.9.13
   roles:
      - amine7777.ansible
 ```
-
 
 Author Information
 ------------------
