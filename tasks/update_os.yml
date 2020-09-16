@@ -11,3 +11,12 @@
     name: '*'
     state: latest
   when: ansible_os_family == 'RedHat'
+
+- name: install dnf-automatic
+  dnf:
+    name: dnf-automatic
+  register: install_dnf_automatic
+  until: install_dnf_automatic.rc == 0
+  retries: 20
+  delay: 0
+  when: ansible_distribution == 'Fedora'
