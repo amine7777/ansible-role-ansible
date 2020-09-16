@@ -1,6 +1,2 @@
 ---
-# defaults file for terraform
-terraform_version: 0.13.1
-terraform_arch: amd64
-terraform_directory_path: /usr/local/bin/
-terraform_download_url: 'https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_{{ terraform_arch }}.zip'
+ansible_version: 2.9.13

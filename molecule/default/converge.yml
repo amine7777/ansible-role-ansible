@@ -8,6 +8,6 @@
         cache_valid_time: 3600
       when: ansible_os_family == 'Debian'
 
-    - name: Include ansible-role-terraform
+    - name: Include ansible-role-ansible
       include_role:
-        name: "ansible-role-terraform"
+        name: "ansible-role-ansible"

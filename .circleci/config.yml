@@ -4,7 +4,7 @@ jobs:
     machine:
       services: docker
     environment:
-      - ROLE_NAME: terraform
+      - ROLE_NAME: ansible
     steps:
       - checkout
       - run:

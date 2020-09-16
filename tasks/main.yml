@@ -1,23 +1,21 @@
 ---
-# tasks file for terraform
-- name: Install unzip
+# tasks file for ansible
+- name: Update OS
+  include_tasks: update_os.yml
+
+- name: Install python3 and pip3
   package:
-    name: unzip
+    name:
+      - python3
+      - python3-pip
     state: present
 
-- name: Download and extract terraform
-  unarchive:
-    src: '{{ terraform_download_url }}'
-    dest: '{{ terraform_directory_path }}'
-    remote_src: yes
-    creates: '{{ terraform_directory_path }}/terraform'
-    mode: 0755
-
-- name: Check terraform version
-  command: terraform --version
+- name: Upgrade pip3
+  command: pip3 install --upgrade pip
   changed_when: false
-  register: check_terraform
 
-- name: Display terraform version
-  debug:
-    msg: '{{ check_terraform.stdout_lines }}'
+- name: Install ansible with version with pip3
+  pip:
+    name: ansible
+    version: '{{ ansible_version }}'
+    executable: pip3
