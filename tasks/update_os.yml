@@ -6,11 +6,13 @@
     cache_valid_time: 3600
   when: ansible_os_family == 'Debian'
 
-- name: Update Debian
+- name: Update
   package:
     name: '*'
     state: latest
-  when: ansible_os_family == 'RedHat'
+  when:
+    - not ansible_distribution == 'Fedora'
+    - ansible_os_family == 'RedHat'
 
 - name: install dnf-automatic
   dnf:
