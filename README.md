@@ -1,4 +1,4 @@
-Ansible role: Terraform
+Ansible role: Ansible
 =========
 
 This role helps you to install ansible on your linux machine.
