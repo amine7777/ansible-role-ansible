@@ -13,14 +13,14 @@ This role helps you to install ansible on your linux machine.
 Requirements
 ------------
 - Linux machine
-- Ansible 2.9
+- Ansible 2.10
 
 Role Variables
 --------------
 
 You can specify your ansible version in this variable.
 ```yaml
-ansible_version: 2.9.6
+ansible_version: 2.10.3
 ```
 
 Example Playbook
