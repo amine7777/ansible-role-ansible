@@ -9,7 +9,7 @@
 - name: Update RedHat
   package:
     name: '*'
-    state: latest
+    state: present
   when:
     - not ansible_distribution == 'Fedora'
     - ansible_os_family == 'RedHat'
