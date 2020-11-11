@@ -41,14 +41,10 @@ jobs:
           - fedora32
 
     steps:
-      - name: Check out the codebase.
-        uses: actions/checkout@v2
-      
-      - name: Molecule
-        uses: gofrolist/molecule-action@v2
+      - name: Molecule test
+        uses: amine7777/molecule-actiont@v1
         with:
-          molecule_options: --debug 
-          molecule_command: test
+          command: molecule test
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
