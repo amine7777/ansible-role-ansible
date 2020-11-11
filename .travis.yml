@@ -13,7 +13,8 @@ env:
 
 
 install:
-  - pip3 install docker molecule[docker]
+  - pip3 install docker==3.4.1
+  - pip3 install molecule yamllint ansible-lint
 
 script:
   - molecule test
