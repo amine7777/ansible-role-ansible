@@ -13,6 +13,7 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
+  log: true
   options:
     vvv: true
 verifier:
