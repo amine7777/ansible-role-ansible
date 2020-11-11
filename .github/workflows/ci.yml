@@ -41,6 +41,9 @@ jobs:
           - fedora32
 
     steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+        
       - name: Molecule test
         uses: amine7777/molecule-action@v1
         with:
