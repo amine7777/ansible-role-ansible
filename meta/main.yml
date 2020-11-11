@@ -24,6 +24,6 @@ galaxy_info:
   galaxy_tags:
     - system
     - ansible
-    - redHat
+    - redhat
     - configuration
     - provisioner
