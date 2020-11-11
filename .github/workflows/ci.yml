@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - name: Molecule test
-        uses: amine7777/molecule-actiont@v1
+        uses: amine7777/molecule-action@v1
         with:
           command: molecule test
         env:
