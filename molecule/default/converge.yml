@@ -10,4 +10,4 @@
 
     - name: Include ansible-role-ansible
       include_role:
-        name: "ansible-role-ansible"
+        name: ansible-role-ansible
