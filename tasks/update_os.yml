@@ -8,8 +8,7 @@
 
 - name: Update RedHat
   package:
-    name: 
-      - epel-release
+    name: epel-release
     state: present
   when:
     - not ansible_distribution == 'Fedora'
@@ -17,7 +16,7 @@
 
 - name: Upgrade all packages
   dnf:
-    name: "*"
+    name: '@Development tools'
     state: present 
   when: ansible_distribution == 'Fedora'
 
