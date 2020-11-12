@@ -47,7 +47,16 @@ jobs:
       - name: Molecule test
         uses: amine7777/molecule-action@v1
         with:
-          command: molecule test
+          command: env
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}
+      
+       - name: Molecule test
+        uses: amine7777/molecule-action@v1
+        with:
+          command: pwd
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
