@@ -8,4 +8,4 @@
         cache_valid_time: 3600
       when: ansible_os_family == 'Debian'
   roles:
-    - role: "ansible-role-ansible"
+    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
