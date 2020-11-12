@@ -22,9 +22,3 @@
   retries: 20
   delay: 0
   when: ansible_distribution == 'Fedora'
-
-# - name: Upgrade all packages
-#   dnf:
-#     name: '@Development tools'
-#     state: present 
-#   when: ansible_distribution == 'Fedora'
