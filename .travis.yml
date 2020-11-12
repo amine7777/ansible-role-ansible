@@ -10,12 +10,11 @@ env:
     - MOLECULE_DISTRO: ubuntu1604
     - MOLECULE_DISTRO: debian10
     - MOLECULE_DISTRO: fedora32
-
-
+    
 install:
   - pip3 install docker==3.4.1
   - pip3 install  yamllint ansible-lint
-  - pip3 install molecule[docker]==3.0.8
+  - pip3 install molecule==3.0.8
 
 script:
   - molecule test
