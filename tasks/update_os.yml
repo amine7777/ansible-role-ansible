@@ -14,12 +14,6 @@
     - not ansible_distribution == 'Fedora'
     - ansible_os_family == 'RedHat'
 
-- name: Upgrade all packages
-  dnf:
-    name: '@Development tools'
-    state: present 
-  when: ansible_distribution == 'Fedora'
-
 - name: Install dnf-automatic
   dnf:
     name: dnf-automatic
@@ -27,4 +21,10 @@
   until: install_dnf_automatic.rc == 0
   retries: 20
   delay: 0
+  when: ansible_distribution == 'Fedora'
+
+- name: Upgrade all packages
+  dnf:
+    name: '@Development tools'
+    state: present 
   when: ansible_distribution == 'Fedora'
