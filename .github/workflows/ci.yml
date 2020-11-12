@@ -53,7 +53,7 @@ jobs:
           ANSIBLE_FORCE_COLOR: '1'
           MOLECULE_DISTRO: ${{ matrix.distro }}
       
-       - name: Molecule test
+      - name: Molecule test
         uses: amine7777/molecule-action@v1
         with:
           command: pwd
