@@ -44,7 +44,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
       
-      - run: mv /github/worspace/* ${{ github.repository }}
+      - run: mv /github/workspace/* ${{ github.repository }}
 
       - name: Molecule test
         uses: amine7777/molecule-action@v1
