@@ -8,12 +8,12 @@
 
 - name: Update RedHat
   package:
-    name: '*'
+    name: 
+      - epel-release
     state: present
   when:
     - not ansible_distribution == 'Fedora'
     - ansible_os_family == 'RedHat'
-
 
 - name: Upgrade all packages
   dnf:
@@ -21,7 +21,7 @@
     state: present 
   when: ansible_distribution == 'Fedora'
 
-- name: install dnf-automatic
+- name: Install dnf-automatic
   dnf:
     name: dnf-automatic
   register: install_dnf_automatic
