@@ -1,13 +1,11 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
+  pre_tasks:
     - name: Update apt cache (on Debian).
       apt:
         update_cache: true
         cache_valid_time: 3600
       when: ansible_os_family == 'Debian'
-
-    - name: Include ansible-role-ansible
-      include_role:
-        name: "ansible-role-ansible"
+  roles:
+    - role: "ansible-role-ansible"
