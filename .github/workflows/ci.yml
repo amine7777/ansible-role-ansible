@@ -47,7 +47,7 @@ jobs:
       - name: Molecule test
         uses: amine7777/molecule-action@v1
         with:
-          command: molecule --debug test 
+          command: ls -la 
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
