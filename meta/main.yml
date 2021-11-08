@@ -3,6 +3,7 @@ dependencies: []
 galaxy_info:
   author: Amine Kahlaoui
   role_name: ansible
+  namespace: amine7777
   description: This role installs ansible on your linux machine.
   issue_tracker_url: https://github.com/amine7777/ansible-role-ansible/issues
   company: https://www.cf2a.tv
